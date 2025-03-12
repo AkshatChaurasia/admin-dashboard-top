@@ -1,0 +1,330 @@
+* {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: 0.8fr 4fr;
+  height: 100vh;
+  grid-template-rows: 1fr;
+}
+
+/* ? Sidebar */
+.sidebar {
+  background-color: #1992d4;
+  color: white;
+  padding: 20px;
+  height: 100%;
+  box-sizing: border-box;
+  font-weight: bolder;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar h1 {
+  font-size: 50px;
+}
+
+.sidebar ul {
+  margin-top: 50px;
+}
+
+.sidebar li {
+  margin: 10px;
+  font-size: 30px;
+}
+
+.sidebar li:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: transform 0.3s;
+}
+
+/* ! Top */
+
+.search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  gap: 20px;
+}
+
+.search-box {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Vertically center */
+}
+
+.search input {
+  margin-left: 30px;
+  border: none;
+  background-color: #e2e8f0;
+  font-size: 40px;
+  padding: 10px;
+  border-radius: 30px;
+  height: 4rem; /* Consistent height */
+  width: 100rem;
+  box-sizing: border-box; /* Padding ko include karega */
+}
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 70px;
+}
+
+.right h2 {
+  font-weight: bold;
+}
+
+.right button {
+  margin: 10px;
+  margin-right: 30px;
+  font-size: 30px;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  border: none;
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right button:hover {
+  background-color: #e2e8f0;
+  transform: scale(1.1); /* Thoda zoom effect */
+  transition: transform 0.3s; /* Smooth transition */
+}
+
+.magnify {
+  border: none;
+  background: none;
+  padding: 0; /* Padding hatao taaki height consistent rahe */
+  height: 4rem; /* Input ke saath match */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.magnify img {
+  margin-left: 20px;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  object-fit: contain; /* Image fit karega */
+}
+
+.magnify button {
+  height: 4rem;
+}
+
+.magnify img:hover {
+  transform: scale(1.5); /* Thoda zoom effect */
+  transition: transform 0.3s; /* Smooth transition */
+}
+
+.top {
+  background-color: #ffffff;
+}
+
+.bod {
+  background-color: #e2e8f0;
+  padding: 10px;
+}
+
+.image-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  overflow: hidden;
+}
+
+.image-button img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover; /* Image ko fit karega circular frame mein */
+  border-radius: 50%; /* Image bhi circular ho */
+}
+
+/*? Hover Effect */
+
+.image-button:hover img {
+  transform: scale(1.1);
+  transition: transform 0.3s;
+}
+
+.img-button {
+  margin: 10px;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  border: none;
+  background: none;
+}
+
+.img-button img {
+  width: 130px;
+  height: 130px;
+  object-fit: cover; /* Image ko fit karega circular frame mein */
+  border-radius: 50%; /* Image bhi circular ho */
+}
+
+.img-button:hover img {
+  transform: scale(1.1); /* Thoda zoom effect */
+  transition: transform 0.3s; /* Smooth transition */
+}
+
+.hello {
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.prof {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.prof-txt {
+  padding: 50px;
+}
+
+.prof-txt p {
+  margin: 0;
+  font-size: 20px;
+}
+
+.prof-txt h2 {
+  margin: 0;
+  font-size: 50px;
+}
+
+.butts button {
+  font-size: 30px;
+  font-weight: bold;
+  background-color: #1992d4;
+  color: white;
+  border: none;
+  padding: 20px 40px;
+  border-radius: 40px;
+  margin: 30px;
+}
+
+/*? Main body of content */
+
+.bod {
+  padding: 20px;
+  margin: 0;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 20px;
+}
+
+.projects {
+  display: grid;
+  grid-column: 1/2;
+  grid-row: 1/4;
+}
+
+.projects h2 {
+  font-size: 30px;
+  margin-bottom: 0;
+}
+
+.cards {
+  display: grid;
+  grid-row: 2/3;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+}
+
+.card {
+  margin: 20px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-left: 10px solid orange;
+  height: 15rem;
+  max-width: 100%;
+  padding: 50px;
+  border-radius: 10px;
+}
+
+.card h3 {
+  font-weight: bold;
+  margin: 0;
+  font-size: 20px;
+}
+
+.card h3,
+.card p {
+  margin-left: -20px;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s;
+}
+
+.announce {
+  background-color: white;
+  border-radius: 10px;
+  padding: 50px;
+  width: 30rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+.announcements h2 {
+  font-size: 30px;
+}
+
+.announce h3 {
+  font-size: 25px;
+}
+
+.trends h2 {
+  font-size: 30px;
+}
+
+.trend {
+  display: flex;
+  align-items: center;
+  padding: 30px;
+}
+
+.trend-txt {
+  margin-left: 5rem;
+  font-size: 20px;
+}
+
+.trend-txt p {
+  font-size: 20px;
+  color: grey;
+}
+
+.trending {
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+  width: 35rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
